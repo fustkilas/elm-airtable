@@ -11,14 +11,6 @@ import Html.Attributes
 import Http
 import Json.Decode as Decode exposing (Decoder, string)
 import Json.Decode.Pipeline exposing (requiredAt)
-
-
-{-| 
-
-    elm-ui is used here for convenience, and is not necessary
-    
--}
-
 import Element exposing (..)
 
 ---

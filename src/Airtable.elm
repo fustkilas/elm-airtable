@@ -15,7 +15,7 @@ type alias DB = {apiKey : String, base : String, table : String}
 
 
 --getRecords db dbView maxRecords pageSize offset expect =
-getRecords: DB -> String -> String
+getRecords: DB -> String -> Expect msg -> Cmd msg
 getRecords db dbView expect =
     Http.request {
         method = "GET"

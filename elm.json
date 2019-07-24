@@ -4,6 +4,9 @@
    "summary":"Elm wrapper for the Airtable API",
    "license":"MIT",
    "version":"1.0.0",
+   "exposed-modules": [
+        "Airtable"
+    ],
    "source-directories":[
       "src"
    ],

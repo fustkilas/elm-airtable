@@ -163,7 +163,7 @@ view model =
      
 
 -}
-
+main: Program () Model Msg
 main =
   Browser.element
     { init = init

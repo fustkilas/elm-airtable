@@ -1,5 +1,9 @@
 {
-    "type": "application",
+    "type": "package",
+    "name": "fustkilas/elm-airtable",
+    "summary": "Elm wrapper for the Airtable API",
+    "license": "MIT",
+    "version": "1.0.0",
     "source-directories": [
         "src"
     ],

@@ -2,6 +2,7 @@
 
 This package is meant as a bare-bones wrapper around the Airtable API over HTTPS, GET, and JSON.
 
+This package used Parcel and elm-ui for convenience, but they are not necessary.
 
 ## Airtable
 

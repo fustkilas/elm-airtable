@@ -2,10 +2,9 @@ module Airtable exposing (getRecords)
 
 {-| 
 
-  Based on https://github.com/altjsus/elmtable
-  Intended as a read-only GET/HTTPS based Airtable-as-CMS
-  Only reads multiple records
+    Based on https://github.com/altjsus/elmtable. Intended as a read-only GET/HTTPS based Airtable-as-CMS. Only reads multiple records
 
+    @docs getRecords
 -}
 
 import Http

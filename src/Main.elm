@@ -1,6 +1,11 @@
 module Main exposing (main)
 
----
+{-| 
+
+    Simple Elm wrapper around the Airtable API. 
+
+-}
+
 
 import Browser
 import Html exposing (Html)

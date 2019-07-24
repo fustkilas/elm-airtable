@@ -13,7 +13,11 @@ import Http exposing (..)
 
 type alias DB = {apiKey : String, base : String, table : String}
 
+{-| 
 
+    GET a list of records from an Airtable Table, by passing it a Base, View, and an Http.ExpectJSON
+
+-}
 --getRecords db dbView maxRecords pageSize offset expect =
 getRecords: DB -> String -> Expect msg -> Cmd msg
 getRecords db dbView expect =

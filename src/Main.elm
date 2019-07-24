@@ -2,7 +2,9 @@ module Main exposing (main)
 
 {-| 
 
-    Simple Elm wrapper around the Airtable API. 
+    Simple Elm wrapper around the Airtable API.
+
+    @docs main 
 
 -}
 
@@ -154,6 +156,13 @@ view model =
 
 
 --- MAIN
+
+{-| 
+
+    main
+     
+
+-}
 
 main =
   Browser.element

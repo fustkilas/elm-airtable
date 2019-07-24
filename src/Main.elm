@@ -12,8 +12,12 @@ import Http
 import Json.Decode as Decode exposing (Decoder, string)
 import Json.Decode.Pipeline exposing (requiredAt)
 
----
---- elm-ui is used here for convenience, and is not necessary
+
+{-| 
+
+    elm-ui is used here for convenience, and is not necessary
+    
+-}
 
 import Element exposing (..)
 
@@ -26,7 +30,13 @@ import Airtable
 
 type alias DB = {apiKey : String, base : String, table : String}
 
---- Use Environment Variables, DO NOT pass your API keys and other secrets this way. These values are for a dummy Airtable I created expressly for this purpose.
+{-| 
+
+    Use Environment Variables, DO NOT pass your API keys and other secrets this way. These values are for a dummy Airtable created expressly for this purpose.
+    
+-}
+
+
 myDB = {apiKey = "keyWeDr2vJl8zd3mG", base = "appFMiCjufAGkO5X4", table = "Examples"}   
 
 
@@ -45,7 +55,13 @@ type alias Record =
 
 
 --- JSON DECODERS
---- Airtable nests records two levels deep; an outer object titled "records", and inner elements titled "fields". This is why decoding is done in two stages, for each record, and then, for a list of records. In hindsight, "Record" was perhaps not the most ideal name for a type chosen, but YMMV.
+
+{-| 
+
+    Airtable nests records two levels deep; an outer object titled "records", and inner elements titled "fields". This is why decoding is done in two stages, for each record, and then, for a list of records. In hindsight, "Record" was perhaps not the most ideal name for a type chosen, but YMMV.
+    
+-}
+
 
 recordDecoder: Decoder Record
 recordDecoder = 
@@ -59,7 +75,14 @@ recordsDecoder =
 
 
 --- INIT
---- Here, we are passing an Airtable View ("Main" in our case). If you don;t do so, records are randomly ordered. Naming a View allows the end user to sort as they wish using Airtable's simple and excellent UI.
+
+{-| 
+
+    Here, we are passing an Airtable View ("Main" in our case). If you don;t do so, records are randomly ordered. Naming a View allows the end user to sort as they wish using Airtable's simple and excellent UI.
+    
+-}
+
+--- 
 
 init : () -> (Model, Cmd Msg)
 init _ =
@@ -94,7 +117,13 @@ subscriptions model =
 
 
 --- VIEWS
---- The final view is a bare-bones MVP-style display of Airtable data. Styling is left upto the reader.
+
+{-| 
+
+    The final view is a bare-bones MVP-style display of Airtable data. Styling is left upto the reader.
+    
+-}
+
 recordView : List Record -> Element Msg
 recordView records = 
     column []
